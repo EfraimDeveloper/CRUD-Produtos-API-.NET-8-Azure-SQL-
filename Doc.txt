@@ -1,0 +1,2 @@
+﻿
+// "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=CrudProdutosDb;Trusted_Connection=True;TrustServerCertificate=true;"
