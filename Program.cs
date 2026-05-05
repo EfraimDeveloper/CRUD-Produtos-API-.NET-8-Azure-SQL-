@@ -25,8 +25,8 @@ namespace CrudProdutos
                 {
                     policy
                        .WithOrigins(
-                                "https://kind-glacier-0dbb2f00f.7.azurestaticapps.net"
-                              
+                                "https://yellow-bush-0ca1fa50f.7.azurestaticapps.net"
+
 )
                         .AllowAnyHeader()
                         .AllowAnyMethod();
