@@ -25,8 +25,8 @@ namespace CrudProdutos
                 {
                     policy
                         .WithOrigins(
-                            "http://localhost:3000",
-                            "https://localhost:3000"
+                            "https://kind-glacier-0dbb2f00f.7.azurestaticapps.net"
+
                         )
                         .AllowAnyHeader()
                         .AllowAnyMethod();
