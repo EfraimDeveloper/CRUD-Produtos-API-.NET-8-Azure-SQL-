@@ -19,6 +19,19 @@ namespace CrudProdutos
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowReact", policy =>
+                {
+                    policy
+                        .WithOrigins(
+                            "http://localhost:3000",
+                            "https://localhost:3000"
+                        )
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -29,6 +42,8 @@ namespace CrudProdutos
             }
 
             app.UseHttpsRedirection();
+            app.UseRouting();
+            app.UseCors("AllowReact");
 
             app.UseAuthorization();
 
