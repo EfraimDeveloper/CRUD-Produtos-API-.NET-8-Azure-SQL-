@@ -24,10 +24,10 @@ namespace CrudProdutos
                 options.AddPolicy("AllowReact", policy =>
                 {
                     policy
-                        .WithOrigins(
-                            "https://kind-glacier-0dbb2f00f.7.azurestaticapps.net"
-
-                        )
+                       .WithOrigins(
+                                "http://localhost:3000",
+                                "https://localhost:3000"
+)
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });
@@ -40,16 +40,11 @@ namespace CrudProdutos
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseCors("AllowReact");
-
             app.UseAuthorization();
-
-
             app.MapControllers();
-
             app.Run();
         }
     }
